@@ -79,7 +79,7 @@ path {
 
 #ment4  {
   position: absolute;
-  top: 253%;
+  top: 258%;
   left: 12%;
   margin-top: -50px;
   margin-right: -100px;
@@ -213,7 +213,7 @@ d3.csv("byYear.csv", function(error, data) {
             .attr("class", "line")
             .style("stroke", function() { // Add the colours dynamically
                 return d.color = color(d.key); })
-            .attr("id", 'tag'+d.key.replace(/\s+/g, '')) // assign ID
+            .attr("id", 'tag1'+d.key.replace(/\s+/g, '')) // assign ID
             .attr("d", valueline(d.values));
 
         // Add the Legend
@@ -228,7 +228,7 @@ d3.csv("byYear.csv", function(error, data) {
                 var active   = d.active ? false : true,
                 newOpacity = active ? 0 : 1; 
                 // Hide or show the elements based on the ID
-                d3.select("#tag"+d.key.replace(/\s+/g, ''))
+                d3.select("#tag1"+d.key.replace(/\s+/g, ''))
                     .transition().duration(100) 
                     .style("opacity", newOpacity); 
                 // Update whether or not the elements are active
@@ -295,7 +295,7 @@ d3.csv("byMonth.csv", function(error, data) {
             .attr("class", "line")
             .style("stroke", function() { // Add the colours dynamically
                 return d.color = color(d.key); })
-            .attr("id", 'tag'+d.key.replace(/\s+/g, '')) // assign ID
+            .attr("id", 'tag2'+d.key.replace(/\s+/g, '')) // assign ID
             .attr("d", valueline2(d.values));
 
         // Add the Legend
@@ -310,7 +310,7 @@ d3.csv("byMonth.csv", function(error, data) {
                 var active   = d.active ? false : true,
                 newOpacity = active ? 0 : 1; 
                 // Hide or show the elements based on the ID
-                d3.select("#tag"+d.key.replace(/\s+/g, ''))
+                d3.select("#tag2"+d.key.replace(/\s+/g, ''))
                     .transition().duration(100) 
                     .style("opacity", newOpacity); 
                 // Update whether or not the elements are active
@@ -375,7 +375,7 @@ d3.csv("byDay.csv", function(error, data) {
             .attr("class", "line")
             .style("stroke", function() { // Add the colours dynamically
                 return d.color = color(d.key); })
-            .attr("id", 'tag'+d.key.replace(/\s+/g, '')) // assign ID
+            .attr("id", 'tag3'+d.key.replace(/\s+/g, '')) // assign ID
             .attr("d", valueline3(d.values));
 
         // Add the Legend
@@ -390,7 +390,7 @@ d3.csv("byDay.csv", function(error, data) {
                 var active   = d.active ? false : true,
                 newOpacity = active ? 0 : 1; 
                 // Hide or show the elements based on the ID
-                d3.select("#tag"+d.key.replace(/\s+/g, ''))
+                d3.select("#tag3"+d.key.replace(/\s+/g, ''))
                     .transition().duration(100) 
                     .style("opacity", newOpacity); 
                 // Update whether or not the elements are active
@@ -455,7 +455,7 @@ d3.csv("byHour.csv", function(error, data) {
             .attr("class", "line")
             .style("stroke", function() { // Add the colours dynamically
                 return d.color = color(d.key); })
-            .attr("id", 'tag'+d.key.replace(/\s+/g, '')) // assign ID
+            .attr("id", 'tag4'+d.key.replace(/\s+/g, '')) // assign ID
             .attr("d", valueline4(d.values));
 
         // Add the Legend
@@ -470,7 +470,7 @@ d3.csv("byHour.csv", function(error, data) {
                 var active   = d.active ? false : true,
                 newOpacity = active ? 0 : 1; 
                 // Hide or show the elements based on the ID
-                d3.select("#tag"+d.key.replace(/\s+/g, ''))
+                d3.select("#tag4"+d.key.replace(/\s+/g, ''))
                     .transition().duration(100) 
                     .style("opacity", newOpacity); 
                 // Update whether or not the elements are active
